@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Persado Test">
+    <parameter name="rcHost" value="localhost"/>
+    <parameter name="rcPort" value="4444"/>
+    <parameter name="targetHostUrl" value="https://www.amazon.com"/>
+    <parameter name="debugging" value="true"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="driverType" value="webdriver"/>
+    <parameter name="actionsLogging" value="true"/>
+    <parameter name="suite.init.context" value="false"/>
+
+    <listeners>
+        <listener class-name="com.persado.oss.quality.stevia.selenium.listeners.TestListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    </listeners>
+
+    <test name="Buy an Amazon Gift Card" preserve-order="true">
+        <classes>
+            <class name="AmazonGiftCard"/>
+        </classes>
+    </test>
+</suite>
